@@ -42,35 +42,57 @@ function setup() {
   console.log(windowHeight);
   boundary_left = new Boundary(0, height / 2, 2, height, 0); // 가상왼쪽벽
   boundary_right = new Boundary(width, height / 2, 2, height, 0); // 가상오른쪽벽
-  boundary_1 = new Boundary(width / 4, height / 2, width / 3, 1, -PI / 4);
-  boundary_2 = new Boundary((width / 4) * 3, height / 2, width / 3, 1, PI / 4);
+
+  boundary_1 = new Boundary(width / 4, (height / 5) * 3, width / 5, 1, -PI / 4);
+  boundary_2 = new Boundary(
+    (width / 4) * 3,
+    (height / 5) * 3,
+    width / 5,
+    1,
+    PI / 4
+  );
   boundary_3 = new Boundary(
     (width / 100) * 38,
-    height / 5,
+    height / 3,
     width / 7,
     1,
     (-PI / 10) * 3
   );
   boundary_4 = new Boundary(
     (width / 100) * 62,
-    height / 5,
+    height / 3,
     width / 7,
     1,
     (PI / 10) * 3
   );
+  boundary_5 = new Boundary(
+    width / 2 - 100,
+    20,
+    width / 4,
+    10,
+    -PI / 2 + PI / 12
+  );
+  boundary_6 = new Boundary(
+    width / 2 + 100,
+    20,
+    width / 4,
+    10,
+    -PI / 2 - PI / 12
+  );
+
   hourglass_left = new Boundary(
     width / 4,
     height / 2,
     (width / 3) * 2,
     5,
-    -PI / 2 - PI / 18
+    -PI / 2 - PI / 36
   );
   hourglass_right = new Boundary(
     (width / 4) * 3,
     height / 2,
     (width / 3) * 2,
     5,
-    -PI / 2 + PI / 18
+    -PI / 2 + PI / 36
   );
 
   const boxImages = [
@@ -86,7 +108,7 @@ function setup() {
     boxImg4_2,
   ];
 
-  for (let i = 0; i < 310; i++) {
+  for (let i = 0; i < 270; i++) {
     const box = new Box(width / 2, 0.2 * i, boxwidth, boxheight, boxImages);
     boxes1.push(box);
   }
@@ -102,6 +124,14 @@ function mouseClicked() {
 function draw() {
   background("white");
   Matter.Engine.update(engine);
+  boundary_1.show();
+  boundary_2.show();
+  boundary_3.show();
+  boundary_4.show();
+  boundary_5.show();
+  boundary_6.show();
+  hourglass_left.show();
+  hourglass_right.show();
 
   for (let box of boxes1) {
     box.show();
