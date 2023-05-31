@@ -43,40 +43,46 @@ function setup() {
   boundary_left = new Boundary(0, height / 2, 2, height, 0); // 가상왼쪽벽
   boundary_right = new Boundary(width, height / 2, 2, height, 0); // 가상오른쪽벽
 
-  boundary_1 = new Boundary(width / 4, (height / 5) * 3, width / 5, 1, -PI / 4);
-  boundary_2 = new Boundary(
-    (width / 4) * 3,
-    (height / 5) * 3,
+  boundary_1 = new Boundary(
+    width / 4,
+    (height / 100) * 61,
     width / 5,
     1,
-    PI / 4
+    -PI / 6
+  );
+  boundary_2 = new Boundary(
+    (width / 4) * 3,
+    (height / 100) * 61,
+    width / 5,
+    1,
+    PI / 6
   );
   boundary_3 = new Boundary(
-    (width / 100) * 38,
-    height / 3,
-    width / 7,
+    (width / 100) * 37,
+    (height / 10) * 4,
+    (width / 100) * 18,
     1,
-    (-PI / 10) * 3
+    (-PI / 11) * 4
   );
   boundary_4 = new Boundary(
-    (width / 100) * 62,
-    height / 3,
-    width / 7,
+    (width / 100) * 63,
+    (height / 10) * 4,
+    (width / 100) * 18,
     1,
-    (PI / 10) * 3
+    (PI / 11) * 4
   );
   boundary_5 = new Boundary(
-    width / 2 - 100,
+    (width / 100) * 44,
     20,
-    width / 4,
-    10,
+    width / 3,
+    1,
     -PI / 2 + PI / 12
   );
   boundary_6 = new Boundary(
-    width / 2 + 100,
+    (width / 100) * 56,
     20,
-    width / 4,
-    10,
+    width / 3,
+    1,
     -PI / 2 - PI / 12
   );
 
@@ -124,14 +130,6 @@ function mouseClicked() {
 function draw() {
   background("white");
   Matter.Engine.update(engine);
-  boundary_1.show();
-  boundary_2.show();
-  boundary_3.show();
-  boundary_4.show();
-  boundary_5.show();
-  boundary_6.show();
-  hourglass_left.show();
-  hourglass_right.show();
 
   for (let box of boxes1) {
     box.show();
