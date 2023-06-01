@@ -47,7 +47,7 @@ header {
   font-size: 14px;
   justify-content: space-around;
   padding: 10px;
-  background-color: grey;
+  background: linear-gradient(to right, white, gray);
   color: black;
 }
 .selection div {
