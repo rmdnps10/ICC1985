@@ -49,9 +49,9 @@ class Box {
           this.currentImage = 3;
         }
       } else {
-        if (pos.y > heightThresholds * 1.5) {
+        if (pos.y > heightThresholds * 1.9) {
           this.currentImage = 2;
-        } else if (pos.y > heightThresholds * 1.3) {
+        } else if (pos.y > heightThresholds * 1.6) {
           this.currentImage = 1;
         } else {
           this.currentImage = 0;

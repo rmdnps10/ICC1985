@@ -5,6 +5,21 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: "pre";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "g";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body {
   margin: 0;
@@ -17,20 +32,23 @@ img {
 }
 
 header {
-  padding: 30px;
-  font-size: 50px;
+  padding: 20px;
+  font-size: 30px;
   text-align: center;
-  font-family: "font1";
+  font-family: "g";
+  font-weight: 100;
+  color: white;
+  background-color: black;
 }
 
 .selection {
-  border: 5px solid black;
-  border-radius: 12px;
   display: flex;
-  font-family: "font1";
-  font-size: 30px;
+  font-family: "g";
+  font-size: 14px;
   justify-content: space-around;
-  padding: 20px;
+  padding: 10px;
+  background-color: grey;
+  color: black;
 }
 .selection div {
   text-decoration: none;
@@ -43,4 +61,21 @@ a {
 
 .selection div:hover {
   transform: scale(1.4);
+}
+
+.insight {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "pre";
+}
+
+.insight span {
+  font-size: 30px;
+}
+
+.discription {
+  margin-top: 10px;
+  text-align: right;
+  margin-right: 30px;
 }
